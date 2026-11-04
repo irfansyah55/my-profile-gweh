@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Irfansyah Anwar | Portofolio</title>
+<meta name="description" content="Portofolio Ahmad Irfansyah Anwar, mahasiswa Manajemen Informasi dan Komunikasi STMM Yogyakarta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050505; --panel:#0b0b0b; --line:#1d1d1d;
+  --red:#d8141f; --red-d:#7a0a11; --text:#f3f3f3; --mute:#8d8d8d;
+  --display:"Anton","Impact",sans-serif; --body:"Inter",system-ui,sans-serif; --script:"Dancing Script",cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.red{color:var(--red)}
+.tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+ 
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;border-bottom:1px solid var(--line)}
+.top{position:relative;z-index:5;display:flex;justify-content:space-between;gap:16px;padding-top:26px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.top b{display:block;color:var(--red);font-weight:600}
+.big{position:absolute;z-index:1;left:50%;top:9%;transform:translateX(-50%);font-family:var(--display);font-size:clamp(5rem,23vw,19rem);line-height:.9;letter-spacing:-.01em;color:var(--red);white-space:nowrap;background:linear-gradient(180deg,#e0141f 25%,#4a0509 100%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+.photo{position:absolute;z-index:2;left:50%;bottom:0;transform:translateX(-50%);height:88%;width:min(560px,92%);-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%),linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,#000 55%,transparent 100%),linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-composite:intersect}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.25) brightness(.85);display:block}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#e0141f 0%,#8c0b13 70%,#2a0306 100%);mix-blend-mode:multiply}
+.hero-body{position:relative;z-index:4;flex:1;display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:24px;padding-top:40px;padding-bottom:44px}
+.hello{font-family:var(--script);font-size:clamp(1.6rem,3vw,2.3rem);line-height:1;margin-bottom:6px}
+.name{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6.2vw,5.4rem);line-height:.95;text-transform:uppercase;letter-spacing:.005em}
+.role{margin-top:14px;color:var(--red);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.95rem}
+.desc{margin-top:12px;max-width:380px;color:#bdbdbd;font-size:.92rem}
+.loc{margin-top:18px;display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--mute)}
+.dot{width:12px;height:12px;border:1.5px solid var(--red);border-radius:50%;position:relative}
+.dot::after{content:"";position:absolute;inset:2px;background:var(--red);border-radius:50%}
+.side{justify-self:end;width:min(280px,100%)}
+.spark{display:flex;gap:12px;align-items:center;font-size:.78rem;color:#cfcfcf;margin-bottom:26px;max-width:230px}
+.spark i{flex:none;width:36px;height:36px;border:1px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-style:normal}
+.stat{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.stat strong{font-family:var(--display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--red);min-width:86px}
+.stat span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);line-height:1.4}
+ 
+/* SECTIONS */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sh{display:flex;align-items:center;gap:24px;margin-bottom:30px}
+.sh h2,.h2{font-family:var(--display);font-weight:400;font-size:1.7rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.sh hr{flex:1;border:0;border-top:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj .shot{aspect-ratio:16/10;border:1px solid var(--line);background:#0e0e0e;overflow:hidden;position:relative;transition:border-color .3s}
+.proj:hover .shot{border-color:var(--red)}
+.bar{height:16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:4px;padding:0 8px}
+.bar s{width:5px;height:5px;border-radius:50%;background:#333}
+.mock{padding:16px;display:grid;gap:8px;height:calc(100% - 16px);align-content:center}
+.mock em{font-family:var(--display);font-style:normal;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1;text-transform:uppercase}
+.mock p{height:5px;background:#2a2a2a;border-radius:3px}
+.mock p:nth-of-type(2){width:70%}
+.mock u{display:block;width:62px;height:18px;background:var(--red)}
+.m2{background:linear-gradient(135deg,#1a0305,#0b0b0b 60%)}
+.m3{background:linear-gradient(135deg,#0b0b0b 40%,#3a070b)}
+.mock .box{position:absolute;right:14px;bottom:14px;width:34%;aspect-ratio:1;border:1px solid var(--red);background:repeating-linear-gradient(45deg,rgba(216,20,31,.25) 0 6px,transparent 6px 12px)}
+.meta{display:flex;align-items:center;gap:14px;margin-top:14px}
+.meta .n{font-family:var(--display);font-size:2rem;color:var(--red);line-height:1}
+.meta div{flex:1}
+.meta b{display:block;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.meta small{color:var(--mute);font-size:.78rem}
+.meta .ar{color:var(--mute);font-size:1.3rem;transition:color .3s,transform .3s}
+.proj:hover .ar{color:var(--red);transform:translateX(4px)}
+ 
+.mid{display:grid;grid-template-columns:1fr 1.1fr .8fr;gap:0;padding:0;border-bottom:1px solid var(--line)}
+.mid>div{padding:56px 32px}
+.mid>div+div{border-left:1px solid var(--line)}
+.mid:first-of-type{padding:0}
+.sub{color:var(--red);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:24px 0 12px}
+.edu{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.edu b{display:block;font-weight:500;font-size:.92rem}
+.edu small{color:var(--mute)}
+.edu span{color:var(--red);font-size:.78rem;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{list-style:none;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border:1px solid #2b2b2b;transition:border-color .25s,color .25s}
+.chips li:hover{border-color:var(--red);color:var(--red)}
+.steps{list-style:none;position:relative}
+.steps li{display:grid;grid-template-columns:30px 40px 1fr;gap:14px;align-items:start;padding-bottom:22px;position:relative}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:58px;top:42px;bottom:2px;border-left:1px solid var(--red-d)}
+.steps .nn{font-family:var(--display);color:var(--red);font-size:1.1rem;padding-top:8px}
+.steps .ic{width:40px;height:40px;border:1px solid var(--red);border-radius:50%;display:grid;place-items:center;font-size:.95rem;background:var(--bg);position:relative;z-index:1}
+.steps b{color:var(--red);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;display:block}
+.steps p{font-size:.82rem;color:#b5b5b5;line-height:1.5}
+.quote{background:linear-gradient(160deg,#a60f18,#4a0509 70%,#1d0204);display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.quote q{font-size:1.25rem;line-height:1.45;quotes:none;font-weight:300}
+.quote q::before{content:"“";display:block;font-family:var(--display);font-size:3.4rem;line-height:.8;color:#ff4a54;margin-bottom:8px}
+.sign{font-family:var(--script);font-size:2rem;line-height:1}
+.quote small{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+ 
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center;border-bottom:0}
+.contact h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1;text-transform:uppercase}
+.contact p{margin-top:14px;max-width:320px;color:#bdbdbd;font-size:.9rem}
+.avail{display:inline-flex;align-items:center;gap:12px;margin-top:26px;color:var(--red);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.avail i{width:36px;height:36px;border:1px solid var(--red);border-radius:50%;display:grid;place-items:center;font-style:normal}
+.rows a,.rows div{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--red-d);font-size:.95rem;transition:color .25s}
+.rows a:hover{color:var(--red)}
+.rows i{flex:none;width:38px;height:38px;border:1px solid var(--red);border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--red);font-size:.9rem}
+.rows span{word-break:break-all}
+footer{padding:22px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.75rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+ 
+@keyframes rise{from{opacity:0;transform:translateX(-50%) translateY(40px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+ 
+@media(max-width:980px){
+  .mid{grid-template-columns:1fr}
+  .mid>div+div{border-left:0;border-top:1px solid var(--line)}
+  .contact{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:760px){
+  .wrap{padding:0 20px}
+  .top span:last-child{display:none}
+  .hero-body{grid-template-columns:1fr;padding-top:34vh}
+  .side{justify-self:start}
+  .photo{height:62%;width:100%}
+  .big{top:12%}
+  .grid3{grid-template-columns:1fr;gap:34px}
+  .mid>div{padding:40px 20px}
+  .sh h2{font-size:1.4rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+ 
+<header class="hero" id="home">
+  <div class="wrap top">
+    <span class="tag"><b>Web Developer</b>Mahasiswa MIK · STMM Yogyakarta</span>
+    <span class="tag">Terbuka untuk kolaborasi <span class="red">✦</span></span>
+  </div>
+ 
+  <div class="big" aria-hidden="true">PORTOFOLIO</div>
+  <div class="photo"><img src="jefri-nichol.jpg" alt="Foto Ahmad Irfansyah Anwar"></div>
+ 
+  <div class="wrap hero-body">
+    <div>
+      <p class="hello">Hello, I’m</p>
+      <h1 class="name">Ahmad<br>Irfansyah<br>Anwar</h1>
+      <p class="role">Mahasiswa MIK &amp; Web Developer</p>
+      <p class="desc">Manusia biasa yang merendah untuk meroket, sedang menjalani hari-hari sebagai mahasigma.</p>
+      <p class="loc"><span class="dot"></span>Yogyakarta, Indonesia</p>
+    </div>
+    <div class="side">
+      <div class="spark"><i>✦</i><span>Turning ideas into powerful digital experiences.</span></div>
+      <div class="stat"><strong>2+</strong><span>Tahun kuliah &amp;<br>belajar</span></div>
+      <div class="stat"><strong>10+</strong><span>Tugas &amp; proyek<br>selesai</span></div>
+      <div class="stat"><strong>100%</strong><span>Semangat<br>menjalani kuliah</span></div>
+    </div>
+  </div>
+</header>
+ 
+<main>
+<section id="projects">
+  <div class="wrap">
+    <div class="sh"><h2>Selected Projects</h2><hr><span class="tag">Placeholder, ganti dengan screenshot</span></div>
+    <div class="grid3">
+      <article class="proj">
+        <div class="shot"><div class="bar"><s></s><s></s><s></s></div>
+          <div class="mock"><em>Profil<br><span class="red">Pribadi</span></em><p></p><p></p><u></u></div></div>
+        <div class="meta"><span class="n">01</span><div><b>Website Profil Pribadi</b><small>HTML/CSS &amp; GitHub Pages</small></div><span class="ar">→</span></div>
+      </article>
+      <article class="proj">
+        <div class="shot m2"><div class="bar"><s></s><s></s><s></s></div>
+          <div class="mock"><em>Cloud<br>Computing</em><p></p><p></p><u></u><span class="box"></span></div></div>
+        <div class="meta"><span class="n">02</span><div><b>Tugas Praktik Cloud</b><small>Web statis</small></div><span class="ar">→</span></div>
+      </article>
+      <article class="proj">
+        <div class="shot m3"><div class="bar"><s></s><s></s><s></s></div>
+          <div class="mock"><em>Portofolio<br><span class="red">Kreatif</span></em><p></p><p></p><u></u></div></div>
+        <div class="meta"><span class="n">03</span><div><b>Portofolio Kreatif Mahasiswa</b><small>Desain UI responsif</small></div><span class="ar">→</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+ 
+<div class="mid" id="about">
+  <div>
+    <h2 class="h2">Education &amp; Skills</h2>
+    <p class="sub">Pendidikan</p>
+    <div class="edu"><div><b>Manajemen Informasi dan Komunikasi</b><small>Sekolah Tinggi Multi Media (STMM) Yogyakarta</small></div><span>Aktif</span></div>
+    <p class="sub">Skills</p>
+    <ul class="chips"><li>HTML/CSS</li><li>Git &amp; GitHub</li><li>Canva</li><li>Microsoft Office</li><li>UI/UX Basics</li><li>Problem Solving</li></ul>
+  </div>
+  <div>
+    <h2 class="h2">Work Process</h2>
+    <ol class="steps" style="margin-top:26px">
+      <li><span class="nn">01</span><span class="ic">⌕</span><div><b>Discover</b><p>Memahami tujuan, audiens, dan kebutuhan proyek.</p></div></li>
+      <li><span class="nn">02</span><span class="ic">✦</span><div><b>Ideate</b><p>Merencanakan, membuat sketsa, dan menentukan konsep.</p></div></li>
+      <li><span class="nn">03</span><span class="ic">✎</span><div><b>Design</b><p>Merancang tampilan dengan fokus pada pengalaman pengguna.</p></div></li>
+      <li><span class="nn">04</span><span class="ic">&lt;/&gt;</span><div><b>Develop</b><p>Membangun website yang cepat dan responsif.</p></div></li>
+      <li><span class="nn">05</span><span class="ic">➤</span><div><b>Deliver</b><p>Menguji, merapikan, lalu merilis dengan sepenuh hati.</p></div></li>
+    </ol>
+  </div>
+  <div class="quote">
+    <q>Good design is not just how it looks, but how it works.</q>
+    <div><span class="sign">Irfansyah</span><br><small>Let’s create something great together.</small></div>
+  </div>
+</div>
+ 
+<section class="contact" id="contact">
+  <div class="wrap" style="display:contents">
+    <div style="padding-left:max(28px,calc((100vw - 1200px)/2 + 28px))">
+      <h2>Let’s work<br>together <span class="red">✦</span></h2>
+      <p>Aku terbuka untuk belajar, berkolaborasi, dan mengerjakan proyek baru. Yuk, bikin sesuatu yang berdampak.</p>
+      <span class="avail"><i>→</i>Terbuka untuk kolaborasi</span>
+    </div>
+    <div class="rows" style="padding-right:max(28px,calc((100vw - 1200px)/2 + 28px))">
+      <a href="mailto:ahmadirfansyah55@gmail.com"><i>✉</i><span>ahmadirfansyah55@gmail.com</span></a>
+      <div><i>⌖</i><span>Yogyakarta, Indonesia</span></div>
+    </div>
+  </div>
+</section>
+</main>
+ 
+<footer><div class="wrap"><span>© 2026 Ahmad Irfansyah Anwar</span><span>Dibuat dengan HTML &amp; CSS, dipublikasikan lewat GitHub Pages</span></div></footer>
+ 
+</body>
+</html>
